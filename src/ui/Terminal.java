@@ -23,9 +23,9 @@ public class Terminal {
 			System.out.print("Col: ");
 			int col = scanner.nextInt();
 			game.currentPlayerTakesAction(row, col);
-			
 		}
-		
+		System.out.println("-------------------------");
+		System.out.println(game.getWinnerName() + " is the Winner");
 	}
 
 	private void renderBoard(Game game) {
