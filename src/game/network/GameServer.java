@@ -36,11 +36,13 @@ public class GameServer extends Observable {
 	class NetworkListener extends Listener {
 
 		public void received(Connection connection, Object object) {
+			System.out.println("ser Re");
 			setChanged();
 			notifyObservers(object);
 		}
 
 		public void connected(Connection arg0) {
+			System.out.println("connect");
 			setChanged();
 			notifyObservers(Network.CONNECT);
 		}
